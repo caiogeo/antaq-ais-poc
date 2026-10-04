@@ -15,7 +15,7 @@ permissions:
 jobs:
   alimentar:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,4 +27,4 @@ jobs:
         env:
           ARCGIS_API_KEY: ${{ secrets.ARCGIS_API_KEY }}
           AISSTREAM_KEY: ${{ secrets.AISSTREAM_KEY }}
-          ESCUTA_S: "150"
+          ESCUTA_S: "230"
