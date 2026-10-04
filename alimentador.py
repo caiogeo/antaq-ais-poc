@@ -31,7 +31,7 @@ FONTE = "aisstream.io (AIS em tempo real), Brasil"
 RECORTE = "Brasil (lon %s a %s, lat %s a %s), GitHub Actions a cada 5 min, escuta de %d s, vistas nos últimos %d min" % (
     BBOX[0], BBOX[2], BBOX[1], BBOX[3], ESCUTA_S, JANELA_MIN)
 # navStat do AIS (ITU-R M.1371), só os que importam para a leitura
-NAVSTAT = {0: "navegando", 1: "fundeado", 2: "sem governo", 3: "manobra restrita", 5: "atracado", 7: "pescando", 8: "à vela", 15: "não informado"}
+NAVSTAT = {0: "navegando", 1: "fundeado", 2: "manobra limitada", 3: "manobra limitada", 5: "atracado", 7: "pescando", 8: "à vela", 15: "não informado"}
 # tamanho dos campos texto (texto maior desfaz o lote inteiro no ArcGIS Online, erro 1003)
 TAM = {"mmsi": 20, "nome": 80, "navstat": 30, "tipo": 10, "destino": 40, "fonte": 120, "no_brasil": 5, "porto_area": 120, "pontos_json": 8000}
 TAM_RASTRO = {"mmsi": 20, "nome": 80}
