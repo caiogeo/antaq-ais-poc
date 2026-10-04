@@ -1,0 +1,3 @@
+requests>=2.32
+websockets>=13
+shapely>=2.0

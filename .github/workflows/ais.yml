@@ -1,0 +1,30 @@
+name: AIS ao vivo Brasil
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ais-ao-vivo
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  alimentar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python alimentador.py
+        env:
+          ARCGIS_API_KEY: ${{ secrets.ARCGIS_API_KEY }}
+          AISSTREAM_KEY: ${{ secrets.AISSTREAM_KEY }}
+          ESCUTA_S: "150"
