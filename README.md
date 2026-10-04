@@ -3,7 +3,7 @@
 Alimentador de posições AIS do Brasil para uma prova de conceito (POC) de demonstração da Imagem Geosistemas para a ANTAQ.
 
 A cada 5 minutos, uma execução do GitHub Actions escuta por cerca de 4 minutos o fluxo do [aisstream.io](https://aisstream.io)
-(receptores voluntários, cobertura desigual, sem garantia de completude) no retângulo do Brasil e grava no ArcGIS Online:
+(cobertura limitada aos receptores disponíveis, sem garantia de completude) no retângulo do Brasil e grava no ArcGIS Online:
 
 - a última posição de cada embarcação vista nos últimos 15 minutos;
 - o rastro dos últimos 15 minutos;

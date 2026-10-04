@@ -27,7 +27,7 @@ SERVICO = os.environ.get("ARCGIS_SERVICO_URL",
 BBOX = (-74.5, -34.5, -28.5, 6.0)          # lon mín, lat mín, lon máx, lat máx (Brasil e mar adjacente)
 ESCUTA_S = int(os.environ.get("ESCUTA_S", "150"))
 JANELA_MIN = 15
-FONTE = "aisstream.io (receptores voluntários, AIS real), Brasil"
+FONTE = "aisstream.io (AIS em tempo real), Brasil"
 RECORTE = "Brasil (lon %s a %s, lat %s a %s), GitHub Actions a cada 5 min, escuta de %d s, vistas nos últimos %d min" % (
     BBOX[0], BBOX[2], BBOX[1], BBOX[3], ESCUTA_S, JANELA_MIN)
 # navStat do AIS (ITU-R M.1371), só os que importam para a leitura
