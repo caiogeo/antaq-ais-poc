@@ -1,8 +1,10 @@
 name: AIS ao vivo Brasil
 
 on:
-  schedule:
-    - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"   # fora dos múltiplos de 5 e da virada da hora, que o GitHub descarta mais
+  # Agendamento pausado em 05/10/2026 a pedido do administrador do Enterprise da Imagem (o alimentador passou a rodar lá).
+  # Para religar, descomentar as duas linhas abaixo.
+  # schedule:
+  #   - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"   # fora dos múltiplos de 5 e da virada da hora, que o GitHub descarta mais
   workflow_dispatch:
 
 concurrency:
