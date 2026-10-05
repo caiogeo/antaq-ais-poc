@@ -28,8 +28,9 @@ BBOX = (-74.5, -34.5, -28.5, 6.0)          # lon mín, lat mín, lon máx, lat m
 ESCUTA_S = int(os.environ.get("ESCUTA_S", "150"))
 JANELA_MIN = 15
 FONTE = "aisstream.io (AIS em tempo real), Brasil"
-RECORTE = "Brasil (lon %s a %s, lat %s a %s), GitHub Actions a cada 5 min, escuta de %d s, vistas nos últimos %d min" % (
-    BBOX[0], BBOX[2], BBOX[1], BBOX[3], ESCUTA_S, JANELA_MIN)
+ORIGEM = os.environ.get("ALIMENTADOR_ORIGEM", "rodada a cada 5 min")   # quem grava (ex.: "servidor da Imagem"), só informativo
+RECORTE = "Brasil (lon %s a %s, lat %s a %s), %s, escuta de %d s, vistas nos últimos %d min" % (
+    BBOX[0], BBOX[2], BBOX[1], BBOX[3], ORIGEM, ESCUTA_S, JANELA_MIN)
 # navStat do AIS (ITU-R M.1371), só os que importam para a leitura
 NAVSTAT = {0: "navegando", 1: "fundeado", 2: "manobra limitada", 3: "manobra limitada", 5: "atracado", 7: "pescando", 8: "à vela", 15: "não informado"}
 # tamanho dos campos texto (texto maior desfaz o lote inteiro no ArcGIS Online, erro 1003)
